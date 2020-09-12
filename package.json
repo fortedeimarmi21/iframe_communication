@@ -1,0 +1,23 @@
+{
+  "name": "iframe_communication",
+  "version": "1.0.0",
+  "description": "tbd",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fortedeimarmi21/iframe_communication.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fortedeimarmi21/iframe_communication/issues"
+  },
+  "homepage": "https://github.com/fortedeimarmi21/iframe_communication#readme"
+}

@@ -13,7 +13,7 @@ abstract class EventDispatcher {
       listeners[type].push(listener);
     }
   }
-  //     <S>(initialState: S | (() => S)): [S, Dispatch<SetStateAction<S>>]
+  
   dispatchEvent = <T extends {type: string}>(event: T) => {
     if (this._listeners === undefined) return;
     const listeners = this._listeners;

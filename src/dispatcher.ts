@@ -14,7 +14,7 @@ abstract class EventDispatcher {
     }
   }
 
-  dispatchEvent = <T, K extends string>(event: {type: K, payload: T}) => {
+  dispatchEvent = <K extends string, T>(event: {type: K, payload: T}) => {
     if (this._listeners === undefined) return;
     const listeners = this._listeners;
     const listenerArray = listeners[event.type];

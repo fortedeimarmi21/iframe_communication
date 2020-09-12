@@ -32,7 +32,10 @@ class CommunicationManager extends EventDispatcher {
       );
       return;
     }
-    this._source = !this._source && event.source ? event.source : this._source;
+
+    if (!this._source && event.source) {
+      this._source = event.source;
+    }
 
     this.onMessage(event);
   };

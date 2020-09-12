@@ -1,5 +1,5 @@
 abstract class EventDispatcher {
-  private _listeners: {[key: string]: any[]} = {};
+  private _listeners: {[key: string]: any} = {};
 
   addEventListener = (type: string, listener: CallableFunction) => {
     if (this._listeners === undefined) this._listeners = {};
@@ -14,7 +14,7 @@ abstract class EventDispatcher {
     }
   }
   
-  dispatchEvent = <T extends {type: string}>(event: T) => {
+  dispatchEvent = <T, K>(event: {type: string, payload: T}) => {
     if (this._listeners === undefined) return;
     const listeners = this._listeners;
     const listenerArray = listeners[event.type];

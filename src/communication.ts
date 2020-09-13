@@ -1,6 +1,6 @@
 import { EventDispatcher } from "./dispatcher";
 
-class CommunicationManager extends EventDispatcher {
+export class CommunicationManager extends EventDispatcher {
   constructor(private _origin: string, private _source: any) {
     super();
   }
@@ -40,5 +40,3 @@ class CommunicationManager extends EventDispatcher {
     this.onMessage(event);
   };
 }
-
-export { CommunicationManager };

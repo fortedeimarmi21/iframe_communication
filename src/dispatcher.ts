@@ -1,4 +1,4 @@
-abstract class EventDispatcher {
+export abstract class EventDispatcher {
   private _listeners: {[key: string]: any} = {};
 
   addEventListener = (type: string, listener: CallableFunction) => {
@@ -29,5 +29,3 @@ abstract class EventDispatcher {
     }
   }
 }
-
-export { EventDispatcher };

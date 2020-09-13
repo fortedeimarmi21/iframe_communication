@@ -18,7 +18,6 @@ export class CommunicationManager extends EventDispatcher {
   };
 
   public onMessage(event: MessageEvent) {
-    console.debug("CommunicationManager:: handleMessageEvent", event, this);
   }
 
   private handleMessageEvent = (event: MessageEvent) => {

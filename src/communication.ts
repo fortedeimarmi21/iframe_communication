@@ -41,4 +41,4 @@ class CommunicationManager extends EventDispatcher {
   };
 }
 
-export default CommunicationManager;
+export { CommunicationManager };

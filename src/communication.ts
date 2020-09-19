@@ -21,11 +21,9 @@ export class CommunicationManager extends EventDispatcher {
   }
 
   private handleMessageEvent = (event: MessageEvent) => {
-    console.debug("CommunicationManager:: handleMessageEvent", event);
-
     if (this._origin !== event.origin) {
       console.debug(
-        "CommunicationManager:: message from unauthorized origin",
+        "CommunicationManager:: message from an unauthorized origin",
         event,
         this
       );

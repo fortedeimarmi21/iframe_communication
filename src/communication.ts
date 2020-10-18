@@ -20,6 +20,11 @@ export class CommunicationManager extends EventDispatcher {
   public onMessage(event: MessageEvent) {
   }
 
+  public dispose() {
+    window.removeEventListener('message', this.handleMessageEvent);
+    this.removeAllEventListeners();
+  }
+
   private handleMessageEvent = (event: MessageEvent) => {
     if (this._origin !== event.origin) {
       console.debug(
